@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
+ 全デバイス共通のスタイルとスマートフォンおよび小型タブレット向けレイアウトの指定
+/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_*/
+
+/*==========================================
+ body
+===========================================*/
+body {
+	width: 100%;
+	background-color:#FFF;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color:#000;
+}
+
+/*==========================================
+ コンテンツエリア -> WORKSのスタイル
+===========================================*/
+div#contents section#work article {
+  text-align: center;
+  width: 50%;
+  min-width: 120px;
+  float: left;
+  margin-bottom: 30px;
+}
+div#contents section#work article img {
+  width: 100%;
+  height: auto;
+  max-width: 184px;
+  margin-top: 40px;
+} 
+div#contents section#work article h3 {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+div#contents section#work article p {
+  text-align: left;
+  font-size: 0.7em;
+  line-height: 2.0em;
+  padding: 0 15px;
+}
+
+/* PC向けおよび大型タブレット向けのレイアウトの指定：769px～960px */
+@media only screen and (min-width: 769px) {
+  div#contents section#work article {
+    width: 33%;
+  }
+  div#contents section#work article h3 {
+    line-height: 2.0em;
+  }
+  div#contents section#work article p {
+    font-size: 0.8em;
+    line-height: 2.0em;
+  }
+
+}
+
+/* PC向けレイアウトの指定：961px以上では固定レイアウト */
+@media only screen and (min-width: 961px) {
+  div#contents {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  div#contents section#work article {
+    width: 20%;
+  }
+  div#contents section#work article h3 {
+    line-height: 2.2em;
+  }
+}
